@@ -6,7 +6,7 @@ Requires=docker.service
 [Service]
 TimeoutStartSec=0
 Restart=always
-ExecStartPre=docker run --name postgres-db -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD -d postgres:15.2
+ExecStart=docker run --name postgres-db -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD -d postgres:15.2
 
 [Install]
 WantedBy=default.target
